@@ -13,7 +13,9 @@ require('dotenv').config()
 
 //---------------------------------- middlewares -----------------------------------------
 
-app.use(compression());
+app.use(compression({
+  level:6
+}))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
